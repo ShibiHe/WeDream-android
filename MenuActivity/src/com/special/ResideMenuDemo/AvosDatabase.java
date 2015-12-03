@@ -90,6 +90,7 @@ public class AvosDatabase {
 			        	 good.price = packages.get(i).getString("price");
 			        	 good.imageLoc = packages.get(i).getString("image");
 			        	 good.image = BitmapFactory.decodeFile(good.imageLoc);
+//			        	 good.pic1 = packages.get(i).getString("picture_1");
 			             if (flag == 1){
 			            	 Packages.List1.add(good);	 
 			             }else{

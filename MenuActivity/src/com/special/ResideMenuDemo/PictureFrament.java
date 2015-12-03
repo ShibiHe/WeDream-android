@@ -41,7 +41,7 @@ public class PictureFrament extends Fragment {
 	    	imageView= (ImageView) parentView.findViewById(R.id.picture);
 	    	imageView.setImageResource(R.drawable.qr);
 	    	textView = (TextView) parentView.findViewById(R.id.twoDCode);
-	    	textView.setText("ÈÃ¿ìµÝÏäÉ¨Ò»É¨£¬´ò¿ªÏä×ÓÍê³ÉÈ¡»õ°É^.^");
+	    	textView.setText("ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½É¨Ò»É¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½^.^");
    	
 	    	Button btn = (Button)parentView.findViewById(R.id.get_button);
 		    btn.setOnClickListener(new View.OnClickListener(){
@@ -49,13 +49,13 @@ public class PictureFrament extends Fragment {
 				public void onClick(View v) {
 					AvosDatabase packages = new AvosDatabase();
 					if (packages.update(getActivity(), TurnControl.selectPackage)){
-						Toast.makeText(getActivity(), "È¡»õ³É¹¦O(¡É_¡É)O", Toast.LENGTH_SHORT).show();
+						Toast.makeText(getActivity(), "È¡ï¿½ï¿½ï¿½É¹ï¿½O(ï¿½ï¿½_ï¿½ï¿½)O", Toast.LENGTH_SHORT).show();
 				        TurnControl.curFragment = 1;
 				        TurnControl.number++;
 			        	changeFragment(new PackageFragment());
 
 					}else{
-						Toast.makeText(getActivity(), "³¼æª×ö²»µ½°¡T.T", Toast.LENGTH_SHORT).show();
+						Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½T.T", Toast.LENGTH_SHORT).show();
 					}
 					
 				}

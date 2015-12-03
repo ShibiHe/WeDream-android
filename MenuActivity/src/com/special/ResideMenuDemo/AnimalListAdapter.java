@@ -17,7 +17,7 @@ import org.w3c.dom.ls.LSException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.LogUtil.log;
-
+import java.lang.*;
 
 
 
