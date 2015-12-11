@@ -85,15 +85,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int menu_background3_l=0x7f020027;
         public static final int menu_background4=0x7f020028;
         public static final int menu_background4_l=0x7f020029;
-        public static final int post_bg1=0x7f02002a;
-        public static final int qr=0x7f02002b;
-        public static final int shadow=0x7f02002c;
-        public static final int tab_item_text_color_selector=0x7f02002d;
-        public static final int title_bar_menu=0x7f02002e;
-        public static final int title_bar_menu_on=0x7f02002f;
-        public static final int titlebar_menu_selector=0x7f020030;
-        public static final int user=0x7f020031;
-        public static final int user_background=0x7f020032;
+        public static final int photo_button=0x7f02002a;
+        public static final int post_bg1=0x7f02002b;
+        public static final int post_button=0x7f02002c;
+        public static final int qr=0x7f02002d;
+        public static final int shadow=0x7f02002e;
+        public static final int tab_item_text_color_selector=0x7f02002f;
+        public static final int title_bar_menu=0x7f020030;
+        public static final int title_bar_menu_on=0x7f020031;
+        public static final int titlebar_menu_selector=0x7f020032;
+        public static final int user=0x7f020033;
+        public static final int user_background=0x7f020034;
     }
     public static final class id {
         public static final int User_Background=0x7f0a000b;

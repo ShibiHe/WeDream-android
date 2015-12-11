@@ -67,11 +67,29 @@ public class PostFragment extends Fragment {
 					try {
 						
 						file = AVFile.withAbsoluteLocalPath(TurnControl.user_ID+TurnControl.photoNumber+".jpg", TurnControl.photoPath);
-						file.saveInBackground();
+						file.saveInBackground(new SaveCallback() {
+							
+							@Override
+							public void done(AVException arg0) {
+								// TODO Auto-generated method stub
+								if (arg0!= null) {
+									log.e("post error", "can not post the photo");
+								}
+								else {
+									log.e("post error", "can post the photo");
+								}
+							}
+						}, new ProgressCallback() {
+							
+							@Override
+							public void done(Integer arg0) {
+								// TODO Auto-generated method stub
+								log.e("post progress", "uploading" + arg0);
+							}
+						});
 						post.put("picture", file);
 						TurnControl.photoNumber++;
 						log.e("photo","ok!");
-						//Toast.makeText(, "select ok!", Toast.LENGTH_SHORT).show();
 					} catch (FileNotFoundException e1) {
 						// TODO Auto-generated catch block
 						//e1.printStackTrace();
