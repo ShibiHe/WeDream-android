@@ -2,7 +2,6 @@ package com.special.ResideMenuDemo;
 
 import java.security.PublicKey;
 
-import tree.love.animtabsview.R.string;
 
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.LogUtil.log;

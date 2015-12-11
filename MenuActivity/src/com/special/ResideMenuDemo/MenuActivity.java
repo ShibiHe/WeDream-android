@@ -55,67 +55,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         PendingIntent pendingIntent= PendingIntent.getActivity(this, 1, new Intent(), flags);  
         return pendingIntent;  
     }  
-    void mySleep(long sec)  
-    {  
-        try{  
-            Thread.sleep(sec);  
-        }  
-        catch(InterruptedException e)  
-        {  
-            e.printStackTrace();  
-        }  
-    }  
-      
-    void myAction()  
-    {  
-    	AvosDatabase avosDatabase=new AvosDatabase();
-    	int num1=Packages.Num1;
-    	int num2=Packages.Num2;
-        avosDatabase.countDatabase(1);
-        avosDatabase.countDatabase(2);
-        //Toast.makeText(this, String.valueOf(num1), Toast.LENGTH_SHORT).show();
-        if(num1!=0){
-        	NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        	int icon = R.drawable.icon;
-        	CharSequence tickerText = "1KM";
-        	long when = System.currentTimeMillis();
-            Notification notification = new Notification(icon, tickerText, when);
-        	NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
-        	//log.e("hahah",String.valueOf(num1));
-        	Context context = getApplicationContext();
-        	CharSequence contentTitle = "你有一个新包裹啦";
-        	CharSequence contentText = "点我查看详细内容";
-        	Intent notificationIntent = new Intent(this, MenuActivity.class);
-        	PendingIntent contentIntent = PendingIntent.getActivity(this, 0,notificationIntent, 0);
-        	notification.setLatestEventInfo(context, contentTitle, contentText,contentIntent);
-        	notification.defaults|=Notification.DEFAULT_ALL;
-        	 nm.notify(1, notification);
-        	avosDatabase.getDatabase(1);
-        }
-        if(num2!=Packages.Num2){
-        	avosDatabase.getDatabase(2);
-        }
-        
-    }  
-    Handler  hd = new Handler (){  
-        public void handleMessage (Message msg)  
-        {  
-            super.handleMessage(msg);     
-                myAction();                      
-                //mySleep(10000);  
-               // Message m= new Message();   
-               // hd.sendMessage(m);   
-              
-        }  
-    };  
-    Thread th = new Thread(){  
-        public  void run ()  
-        {  
-            Message m= new Message();
-            mySleep(1000);   
-            hd.sendMessage(m);
-        }  
-    };  
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,29 +63,9 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         mContext = this;
         menuActivity=this;
         setUpMenu();
-        long mpid=Thread.currentThread().getId();  
-        th.start();  
-        
+
         AvosDatabase avosDatabase=new AvosDatabase();
-        SharedPreferences sharedPreferences=getSharedPreferences("Package", Context.MODE_PRIVATE);
-        int num1=sharedPreferences.getInt("NUM1", 0);
         avosDatabase.countDatabase(1);
-        if(Packages.Num1!=num1){
-        	
-        	NotificationManager nm = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-        	Notification n = new Notification();
-        	
-        	n.icon=R.drawable.icon;
-        	n.tickerText="你有新包裹啦!";
-        	n.when = System.currentTimeMillis();   
-               
-             nm.notify(1, n);  
-        	
-        	
-        	Editor editor=sharedPreferences.edit();
-        	editor.putInt("NUM1", Packages.Num1);
-        	editor.commit();
-        }
         if( savedInstanceState == null )
             changeFragment(new HomeFragment());
    
@@ -181,9 +101,9 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
 
         // create menu items;
         itemHome     = new ResideMenuItem(this, R.drawable.icon_home,     "主界面");
-        itemMypackage  = new ResideMenuItem(this, R.drawable.icon_package,  "我的包裹");
+        itemMypackage  = new ResideMenuItem(this, R.drawable.icon_package,  "WeDream");
         itemProfile  = new ResideMenuItem(this, R.drawable.icon_profile,  "个人资料");
-        itemShare = new ResideMenuItem(this,R.drawable.icon_share,"好友分享");
+        itemShare = new ResideMenuItem(this,R.drawable.icon_share,"MyDream");
         itemAnalysis = new ResideMenuItem(this, R.drawable.icon_analysis, "购物分析");
         itemSkin = new ResideMenuItem(this, R.drawable.icon_settings, "多彩皮肤");
         itemSignOut  = new ResideMenuItem(this, R.drawable.icon_back,  "注销账号");
@@ -241,9 +161,9 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
             Intent intent = new Intent();
         	intent.setClass(MenuActivity.this, ProfileActivity.class);
         	startActivity(intent);
-        	MenuActivity.this.onDestroy();
         }else if(view == itemShare){
         	TurnControl.curFragment = 3;
+        	changeFragment(new MyDreamFragment());
         }else if (view == itemSkin){
             TurnControl.curFragment = 4;
         	changeFragment(new SkinFragment());
@@ -255,8 +175,6 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         	Intent intent = new Intent();
         	intent.setClass(MenuActivity.this, LoginActivity.class);
         	startActivity(intent);
-        	MenuActivity.this.onDestroy();
-        	hd.removeCallbacks(th);
         }
 
         resideMenu.closeMenu();

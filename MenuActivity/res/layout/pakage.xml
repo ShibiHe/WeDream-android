@@ -3,12 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="tree.love.animtabsview.demo.MainActivity$PlaceholderFragment" >
-    <tree.love.animtabsview.AnimTabsView
-        android:id="@+id/publiclisten_tab"
-        android:layout_width="fill_parent"
-        android:layout_height="48dip"
-        android:background="#f68a3c" >
-    </tree.love.animtabsview.AnimTabsView>
 
     <ListView
         android:id="@+id/listView"
