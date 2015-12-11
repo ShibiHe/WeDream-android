@@ -13,4 +13,7 @@ public class TurnControl {
 	public static String user_ID="";
 	public static AVObject userAvObject = new AVObject("UserList");
 	public static int number=0;
+	public static int RESULT_LOAD_IMAGE = 1;
+	public static String photoPath = "";
+	public static int photoNumber = 0;
 }

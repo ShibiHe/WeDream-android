@@ -85,22 +85,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int menu_background3_l=0x7f020027;
         public static final int menu_background4=0x7f020028;
         public static final int menu_background4_l=0x7f020029;
-        public static final int qr=0x7f02002a;
-        public static final int shadow=0x7f02002b;
-        public static final int tab_item_text_color_selector=0x7f02002c;
-        public static final int title_bar_menu=0x7f02002d;
-        public static final int title_bar_menu_on=0x7f02002e;
-        public static final int titlebar_menu_selector=0x7f02002f;
-        public static final int user=0x7f020030;
-        public static final int user_background=0x7f020031;
+        public static final int post_bg1=0x7f02002a;
+        public static final int qr=0x7f02002b;
+        public static final int shadow=0x7f02002c;
+        public static final int tab_item_text_color_selector=0x7f02002d;
+        public static final int title_bar_menu=0x7f02002e;
+        public static final int title_bar_menu_on=0x7f02002f;
+        public static final int titlebar_menu_selector=0x7f020030;
+        public static final int user=0x7f020031;
+        public static final int user_background=0x7f020032;
     }
     public static final class id {
         public static final int User_Background=0x7f0a000b;
         public static final int User_ID=0x7f0a000a;
-        public static final int backgroundButton1=0x7f0a003d;
-        public static final int backgroundButton2=0x7f0a003e;
-        public static final int backgroundButton3=0x7f0a003f;
-        public static final int backgroundButton4=0x7f0a0040;
+        public static final int backgroundButton1=0x7f0a0040;
+        public static final int backgroundButton2=0x7f0a0041;
+        public static final int backgroundButton3=0x7f0a0042;
+        public static final int backgroundButton4=0x7f0a0043;
         public static final int btn_add_qrcode=0x7f0a001d;
         public static final int btn_open_menu=0x7f0a0022;
         public static final int chart1=0x7f0a001a;
@@ -113,15 +114,15 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int fullscreen_content_controls=0x7f0a000e;
         public static final int general_background=0x7f0a0025;
         public static final int get_button=0x7f0a0032;
-        public static final int itemText=0x7f0a0034;
-        public static final int itemTitle=0x7f0a0033;
-        public static final int iv_background=0x7f0a0035;
+        public static final int itemText=0x7f0a0037;
+        public static final int itemTitle=0x7f0a0036;
+        public static final int iv_background=0x7f0a0038;
         public static final int iv_goods=0x7f0a002c;
-        public static final int iv_icon=0x7f0a003b;
+        public static final int iv_icon=0x7f0a003e;
         public static final int iv_qr_image=0x7f0a001e;
-        public static final int iv_shadow=0x7f0a0036;
-        public static final int layout_left_menu=0x7f0a0038;
-        public static final int layout_right_menu=0x7f0a003a;
+        public static final int iv_shadow=0x7f0a0039;
+        public static final int layout_left_menu=0x7f0a003b;
+        public static final int layout_right_menu=0x7f0a003d;
         public static final int layout_top=0x7f0a0026;
         public static final int listView=0x7f0a001b;
         public static final int login=0x7f0a0006;
@@ -137,6 +138,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int message_register_in_button=0x7f0a0017;
         public static final int password=0x7f0a0005;
         public static final int picture=0x7f0a0030;
+        public static final int post_EditText=0x7f0a0033;
+        public static final int post_ImageButton=0x7f0a0034;
+        public static final int post_SelectButton=0x7f0a0035;
         public static final int profileList=0x7f0a000d;
         public static final int profile_up=0x7f0a0009;
         public static final int publiclisten_tab=0x7f0a002a;
@@ -144,8 +148,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int register_password=0x7f0a0012;
         public static final int register_password_repeat=0x7f0a0013;
         public static final int signOut_button=0x7f0a000f;
-        public static final int sv_left_menu=0x7f0a0037;
-        public static final int sv_right_menu=0x7f0a0039;
+        public static final int sv_left_menu=0x7f0a003a;
+        public static final int sv_right_menu=0x7f0a003c;
         public static final int tel=0x7f0a0019;
         public static final int tel_login_form=0x7f0a0010;
         public static final int tel_register_in_button=0x7f0a0014;
@@ -155,7 +159,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int tv_goodsName=0x7f0a002d;
         public static final int tv_goodsPrice=0x7f0a002f;
         public static final int tv_logisticalCompany=0x7f0a002e;
-        public static final int tv_title=0x7f0a003c;
+        public static final int tv_title=0x7f0a003f;
         public static final int twoDCode=0x7f0a0031;
         public static final int user=0x7f0a0003;
         public static final int user_new=0x7f0a0015;
@@ -174,10 +178,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int pakage=0x7f030009;
         public static final int pakage_item=0x7f03000a;
         public static final int picture=0x7f03000b;
-        public static final int profile_list=0x7f03000c;
-        public static final int residemenu=0x7f03000d;
-        public static final int residemenu_item=0x7f03000e;
-        public static final int skin=0x7f03000f;
+        public static final int post=0x7f03000c;
+        public static final int profile_list=0x7f03000d;
+        public static final int residemenu=0x7f03000e;
+        public static final int residemenu_item=0x7f03000f;
+        public static final int skin=0x7f030010;
     }
     public static final class string {
         public static final int action_message_in=0x7f070014;

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    tools:context="tree.love.animtabsview.demo.MainActivity$PlaceholderFragment" >
+
+    
+
+    <EditText
+        android:id="@+id/post_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="191dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="71dp"
+        android:ems="10"
+        android:text="record your life" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/post_ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/post_EditText"
+        android:layout_marginLeft="62dp"
+        android:layout_marginTop="98dp"
+        android:src="@drawable/button" />
+
+    <ImageButton
+        android:id="@+id/post_SelectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/post_ImageButton"
+        android:layout_marginRight="79dp"
+        android:src="@drawable/button" />
+	
+</RelativeLayout>
+

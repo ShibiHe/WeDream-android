@@ -17,9 +17,12 @@ import android.content.SharedPreferences;
 import android.content.DialogInterface.OnClickListener;
 import android.content.SharedPreferences.Editor;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -45,6 +48,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
     private ResideMenuItem itemAnalysis;
     private ResideMenuItem itemSkin;
     private ResideMenuItem itemShare;
+    private ResideMenuItem itemPost;
     static MenuActivity menuActivity;
     String mTitleStr="haha title:";  
     int mCount= 0;  
@@ -107,7 +111,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         itemAnalysis = new ResideMenuItem(this, R.drawable.icon_analysis, "购物分析");
         itemSkin = new ResideMenuItem(this, R.drawable.icon_settings, "多彩皮肤");
         itemSignOut  = new ResideMenuItem(this, R.drawable.icon_back,  "注销账号");
-
+        itemPost = new ResideMenuItem(this, R.drawable.icon_message, "上传打卡");
         
 
         itemHome.setOnClickListener(this);
@@ -117,7 +121,8 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         itemSignOut.setOnClickListener(this);
         itemAnalysis.setOnClickListener(this);
         itemSkin.setOnClickListener(this);
-
+        itemPost.setOnClickListener(this);
+        
         resideMenu.addMenuItem(itemHome, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(itemMypackage, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(itemProfile, ResideMenu.DIRECTION_LEFT);
@@ -125,7 +130,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         resideMenu.addMenuItem(itemShare,ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(itemAnalysis, ResideMenu.DIRECTION_RIGHT);
         resideMenu.addMenuItem(itemSignOut, ResideMenu.DIRECTION_RIGHT);
-
+        resideMenu.addMenuItem(itemPost, ResideMenu.DIRECTION_RIGHT);
         // You can disable a direction by setting ->
         // resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT);
 
@@ -175,7 +180,10 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         	Intent intent = new Intent();
         	intent.setClass(MenuActivity.this, LoginActivity.class);
         	startActivity(intent);
-        }
+        }else if (view == itemPost) {
+        		TurnControl.curFragment = 3;
+        		changeFragment(new PostFragment());
+		}
 
         resideMenu.closeMenu();
     }
@@ -205,7 +213,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         if (keyCode == KeyEvent.KEYCODE_BACK) {
         	switch (TurnControl.curFragment)
         	{
-        	case 1: case 2: case 3: case 4: case 5:
+        	case 1: case 2: case 3: case 4: case 5: case 6:
         		TurnControl.curFragment = 0;
         		changeFragment(new HomeFragment());
         		break;
@@ -240,5 +248,25 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
     // What good method is to access resideMenu
     public ResideMenu getResideMenu(){
         return resideMenu;
+    }
+    
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        //super.onActivityResult(requestCode, resultCode, data);
+       log.e("select", "requestCode = "+requestCode + " resultCode = "+RESULT_OK);
+        if (requestCode == TurnControl.RESULT_LOAD_IMAGE+65536 && resultCode == -1 && null != data) {
+            Uri selectedImage = data.getData();
+            String[] filePathColumn = { MediaStore.Images.Media.DATA };
+  
+            Cursor cursor = getContentResolver().query(selectedImage,
+                    filePathColumn, null, null, null);
+            cursor.moveToFirst();
+
+            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+            String picturePath = cursor.getString(columnIndex);
+            cursor.close();
+            	log.e("select","path = " + picturePath);
+            	TurnControl.photoPath = picturePath;
+        }
+  
     }
 }
