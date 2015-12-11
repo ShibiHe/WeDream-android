@@ -36,8 +36,8 @@ import android.widget.Toast;
 		@SuppressLint("NewApi")
 		private void setupViews(View rootView) {
 			mTabsView = (AnimTabsView) rootView.findViewById(R.id.publiclisten_tab);
-			mTabsView.addItem("We Dream");
-			mTabsView.addItem("My Dream");
+			mTabsView.addItem("未取包裹");
+			mTabsView.addItem("已取包裹");
 	        
 	        final AnimalListAdapter arrayAdapter = new AnimalListAdapter (getActivity());
 

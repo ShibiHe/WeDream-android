@@ -10,7 +10,7 @@
             android:orientation="vertical"
               android:layout_width="match_parent"
        		 android:layout_height="55dp"
-       		 android:background= "#00c0f2"
+       		 android:background= "#f68a3c"
             android:id="@+id/layout_top">
 
         <FrameLayout
@@ -30,7 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="7dp"
-                    android:text="WeDream"
+                    android:text="1KM"
                     android:textSize="24sp"
                     android:textColor="#ffffff"
                     android:layout_gravity="center"/>
