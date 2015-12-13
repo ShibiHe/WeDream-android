@@ -88,6 +88,7 @@ public class AvosDatabase {
 			        	 good.category = packages.get(i).getString("category");
 			             good.name = packages.get(i).getString("name");
 			        	 good.price = packages.get(i).getString("price");
+			        	 good.picture = packages.get(i).getAVFile("picture_1");
 			        	 good.imageLoc = packages.get(i).getString("image");
 			        	 good.image = BitmapFactory.decodeFile(good.imageLoc);
 			             if (flag == 1){

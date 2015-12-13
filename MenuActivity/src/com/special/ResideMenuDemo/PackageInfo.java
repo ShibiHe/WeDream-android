@@ -1,5 +1,7 @@
 package com.special.ResideMenuDemo;
 
+import com.avos.avoscloud.AVFile;
+
 import android.graphics.Bitmap;
 
 public class PackageInfo {
@@ -10,4 +12,5 @@ public class PackageInfo {
 	String imageLoc;
 	String category;
 	Bitmap image;
+	AVFile picture;
 }

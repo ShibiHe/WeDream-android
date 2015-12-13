@@ -26,7 +26,7 @@ public class AnimalListAdapter extends BaseAdapter
 	class ViewHolder {  
 		
 		public int flag;
-		public ImageView icon;
+		public AVImageView icon;
 		public TextView cn_word0;
 		public TextView cn_word1;
 		public TextView cn_word2;
@@ -67,7 +67,7 @@ public class AnimalListAdapter extends BaseAdapter
 		if (convertView == null) {
 			holder = new ViewHolder();
 			convertView = mInflater.inflate(R.layout.pakage_item, null);
-			holder.icon = (ImageView) convertView.findViewById(R.id.iv_goods);  
+			holder.icon = (AVImageView) convertView.findViewById(R.id.iv_goods);  
 			holder.cn_word0 = (TextView) convertView.findViewById(R.id.tv_goodsID);
 			holder.cn_word1 = (TextView) convertView.findViewById(R.id.tv_logisticalCompany);  
 			holder.cn_word2 = (TextView) convertView.findViewById(R.id.tv_goodsName);
@@ -88,7 +88,9 @@ public class AnimalListAdapter extends BaseAdapter
 		holder.cn_word1.setText(good.company);
 		holder.cn_word2.setText(good.name);
 		holder.cn_word3.setText(good.price);
-		holder.icon.setImageBitmap(good.image);
+//		holder.icon.setImageBitmap(good.image);
+		holder.icon.setAVFile(good.picture);
+		holder.icon.loadInBackground();
 		return convertView;
 	}  
 
