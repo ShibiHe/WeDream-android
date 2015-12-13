@@ -115,6 +115,7 @@ public class AvosDatabase {
 		tmpPackage.put("price", tmpList1Package.price);
 		tmpPackage.put("company", tmpList1Package.company);
 		tmpPackage.put("image", tmpList1Package.imageLoc);
+		tmpPackage.put("picture_1", tmpList1Package.picture);
 		tmpPackage.put("UserID", TurnControl.user_ID);
 		tmpPackage.saveInBackground();
 		

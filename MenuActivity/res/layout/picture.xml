@@ -7,13 +7,12 @@
     
 
     
-    <ImageView
+    <com.special.ResideMenuDemo.AVImageView
         android:id="@+id/picture"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_marginTop="50dp"
-        android:layout_gravity="center"
-        android:src="@drawable/qr" />
+        android:layout_gravity="center"/>
 
 
     <TextView
@@ -32,7 +31,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="50dp"
-        android:text="点我手动取货T.T" />
+        android:text="喜欢" />
     
 	
 </LinearLayout>

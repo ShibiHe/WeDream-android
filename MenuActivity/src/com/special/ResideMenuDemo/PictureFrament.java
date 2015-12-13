@@ -3,6 +3,9 @@ package com.special.ResideMenuDemo;
 import java.security.PublicKey;
 
 
+import java.util.ArrayList;
+
+import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.LogUtil.log;
 import com.special.ResideMenu.ResideMenu;
@@ -27,8 +30,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class PictureFrament extends Fragment {
+		ArrayList<PackageInfo> list = Packages.List2;
 		View parentView;
-		ImageView imageView;
+		AVImageView imageView;
 		TextView textView;
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		   parentView = inflater.inflate(R.layout.picture, container, false);
@@ -37,10 +41,17 @@ public class PictureFrament extends Fragment {
 	         
 	    }
 	    public void initview(){
-	    	imageView= (ImageView) parentView.findViewById(R.id.picture);
-	    	imageView.setImageResource(R.drawable.qr);
+	    	if (TurnControl.flagGet == 1) 
+	    		list = Packages.List1; else
+	    			list = Packages.List2;
+	    	imageView= (AVImageView) parentView.findViewById(R.id.picture);
+//	    	imageView.setImageResource(R.drawable.qr);
 	    	textView = (TextView) parentView.findViewById(R.id.twoDCode);
-	    	textView.setText("ÈÃ¿ìµÝÏäÉ¨Ò»É¨£¬´ò¿ªÏä×ÓÍê³ÉÈ¡»õ°É^.^");
+	    	AVFile picture_big = list.get(TurnControl.selectPackage).picture; 
+	    	String introduction = list.get(TurnControl.selectPackage).name;
+	    	imageView.setAVFile(picture_big);
+	    	imageView.loadInBackground();
+	    	textView.setText(introduction);
    	
 	    	Button btn = (Button)parentView.findViewById(R.id.get_button);
 		    btn.setOnClickListener(new View.OnClickListener(){
@@ -48,13 +59,13 @@ public class PictureFrament extends Fragment {
 				public void onClick(View v) {
 					AvosDatabase packages = new AvosDatabase();
 					if (packages.update(getActivity(), TurnControl.selectPackage)){
-						Toast.makeText(getActivity(), "È¡»õ³É¹¦O(¡É_¡É)O", Toast.LENGTH_SHORT).show();
+						Toast.makeText(getActivity(), "È¡ï¿½ï¿½ï¿½É¹ï¿½O(ï¿½ï¿½_ï¿½ï¿½)O", Toast.LENGTH_SHORT).show();
 				        TurnControl.curFragment = 1;
 				        TurnControl.number++;
 			        	changeFragment(new PackageFragment());
 
 					}else{
-						Toast.makeText(getActivity(), "³¼æª×ö²»µ½°¡T.T", Toast.LENGTH_SHORT).show();
+						Toast.makeText(getActivity(), "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½T.T", Toast.LENGTH_SHORT).show();
 					}
 					
 				}

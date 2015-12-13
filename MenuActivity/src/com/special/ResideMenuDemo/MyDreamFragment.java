@@ -1,5 +1,7 @@
 package com.special.ResideMenuDemo;
 
+import com.avos.avoscloud.LogUtil.log;
+
 import android.annotation.SuppressLint;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
