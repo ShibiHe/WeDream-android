@@ -21,22 +21,24 @@
 
     <ImageButton
         android:id="@+id/post_ImageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="90dp"
+        android:layout_height="51dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/post_EditText"
-        android:layout_marginLeft="62dp"
-        android:layout_marginTop="98dp"
-        android:src="@drawable/button" />
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="58dp"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="false"
+        android:src="@drawable/post_button" />
 
     <ImageButton
         android:id="@+id/post_SelectButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_width="90dp"
+        android:layout_height="51dp"
         android:layout_alignTop="@+id/post_ImageButton"
-        android:layout_marginRight="79dp"
-        android:src="@drawable/button" />
+        android:layout_marginLeft="44dp"
+        android:layout_toRightOf="@+id/post_ImageButton"
+        android:src="@drawable/photo_button" />
 	
 </RelativeLayout>
 

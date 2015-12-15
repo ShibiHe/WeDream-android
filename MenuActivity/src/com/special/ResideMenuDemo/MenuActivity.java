@@ -266,6 +266,8 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
             cursor.close();
             	log.e("select","path = " + picturePath);
             	TurnControl.photoPath = picturePath;
+			Toast.makeText(this, "select ok!", Toast.LENGTH_SHORT).show();
+
         }
   
     }
