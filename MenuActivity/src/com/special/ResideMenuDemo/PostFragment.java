@@ -39,13 +39,12 @@ public class PostFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		
-		
 		saveBundle=savedInstanceState;
 		View rootView = inflater.inflate(R.layout.post, container, false);
-		rootView.setBackgroundResource(R.drawable.post_bg1);
+		//rootView.setBackgroundResource(R.drawable.post_bg1);
 		final EditText eText  = (EditText) rootView.findViewById(R.id.post_EditText);
-		ImageButton btn = (ImageButton)rootView.findViewById(R.id.post_ImageButton);
-		ImageButton selectButton = (ImageButton)rootView.findViewById(R.id.post_SelectButton);
+		Button btn = (Button)rootView.findViewById(R.id.post_ImageButton);
+		Button selectButton = (Button)rootView.findViewById(R.id.post_SelectButton);
 		   btn.setOnClickListener(new View.OnClickListener(){
 				@Override
 				
