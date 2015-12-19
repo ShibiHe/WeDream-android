@@ -16,4 +16,5 @@ public class TurnControl {
 	public static int RESULT_LOAD_IMAGE = 1;
 	public static String photoPath = "";
 	public static int photoNumber = 0;
+
 }
