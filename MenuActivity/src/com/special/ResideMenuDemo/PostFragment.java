@@ -28,6 +28,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,9 +44,12 @@ public class PostFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.post, container, false);
 		//rootView.setBackgroundResource(R.drawable.post_bg1);
 		final EditText eText  = (EditText) rootView.findViewById(R.id.post_EditText);
-		Button btn = (Button)rootView.findViewById(R.id.post_ImageButton);
-		Button selectButton = (Button)rootView.findViewById(R.id.post_SelectButton);
-		   btn.setOnClickListener(new View.OnClickListener(){
+	//	Button postButton = (Button)rootView.findViewById(R.id.post_ImageButton);
+	//	Button selectButton = (Button)rootView.findViewById(R.id.post_SelectButton);
+		ImageView postButton = (ImageView) rootView.findViewById(R.id.post_post);
+        ImageView selectButton = (ImageView) rootView.findViewById(R.id.post_photo);
+        ImageView backButton = (ImageView) rootView.findViewById(R.id.post_back);
+		   postButton.setOnClickListener(new View.OnClickListener(){
 				@Override
 				
 				public void onClick(View v) {
@@ -121,6 +125,16 @@ public class PostFragment extends Fragment {
 				}
 		    	
 		    });
+		   
+		   backButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				TurnControl.curFragment = 0;
+        			changeFragment(new HomeFragment());
+			}
+		});
 		return rootView;
 	}
 	
