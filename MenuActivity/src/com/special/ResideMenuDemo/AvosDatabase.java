@@ -1,6 +1,8 @@
 package com.special.ResideMenuDemo;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -135,7 +137,38 @@ public class AvosDatabase {
 		    }
 
 		});
-
+		
+   	 	//Log.e("get error", "get started");
+	     for (int i = 0; i < 11; i++) { //找前10天的数据
+	    	 //Log.e("get error", "get error " + i);
+//			 calendar.add(Calendar.DATE, -1); //得到前一天
+//			 Date thisdate = calendar.getTime();
+//			 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+	    	 	 GregorianCalendar cal_today = new GregorianCalendar();  
+	 	     Date todays = new Date();  
+	 	     cal_today.setTime(todays);
+	 	     cal_today.add(5,-i); 
+	 	     Date thisdate=cal_today.getTime();
+	 	     Log.e("not found", thisdate.toString());
+			 AVQuery<AVObject> query_date = new AVQuery<AVObject>("PackageList2");
+			 final int index = i;
+			 
+			 query_date.whereGreaterThan("createdAt", thisdate);
+ 			 query_date.whereEqualTo("UserID", TurnControl.user_ID); //用户名
+ 			 
+ 			 query_date.countInBackground(new CountCallback() {
+				public void done(int count, AVException e) {
+			        if (e == null) {
+			        		Log.e("get error", "data + " + count);
+						TurnControl.PunchPerDay[index] = count;
+			        } else {
+			            Log.e("not found", "get error " + e.getMessage());
+			        }
+			    }
+ 			});
+ 			
+		 }
+		 
     }
 	
 	boolean update(final Context context, final int num){

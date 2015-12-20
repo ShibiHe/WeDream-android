@@ -67,6 +67,7 @@ public class HomeFragment extends Fragment {
                 AvosDatabase avosDatabase=new AvosDatabase();
                 TurnControl.Plan.clear();
                 avosDatabase.getDatabase(1);
+                Toast.makeText(getActivity(), "Update Successfully", Toast.LENGTH_SHORT);
             }
         });
         home_sum_text.setText(String.valueOf(TurnControl.number));
