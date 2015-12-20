@@ -62,7 +62,10 @@ public class AvosDatabase {
 					TurnControl.number=packages.size();
 				}
 			});
-		query.whereEqualTo("UserID",TurnControl.user_ID);
+        if (flag==1)
+        	query.whereEqualTo("UserID",TurnControl.user_ID);
+        else
+        	query.whereEqualTo("category", "we");
         query.findInBackground(new FindCallback<AVObject>() {
 			public void done(List<AVObject> packages, AVException e) {
 				
@@ -81,6 +84,7 @@ public class AvosDatabase {
 					for (int i = 0; i < packages.size(); i++)
 					{
 			        	 PackageInfo good = new PackageInfo();
+			        	 good.objectID = packages.get(i).getObjectId();
 			             good.company = packages.get(i).getString("company");
 			        	 good.category = packages.get(i).getString("category");
 			             good.name = packages.get(i).getString("name");
@@ -176,6 +180,7 @@ public class AvosDatabase {
 		
 		AVObject tmpPackage = new AVObject("PackageList2");
 		tmpPackage.put("name", tmpList1Package.name);
+		//tmpPackage.put("objectId", tmpList1Package.objectID);
 		tmpPackage.put("category", tmpList1Package.category);
 		tmpPackage.put("price", tmpList1Package.price);
 		tmpPackage.put("company", tmpList1Package.company);

@@ -13,4 +13,5 @@ public class PackageInfo {
 	String category;
 	Bitmap image;
 	AVFile picture;
+	String objectID;
 }
