@@ -82,7 +82,8 @@ public class PostFragment extends Fragment {
 					post.put("name", eText.getText().toString());
 					post.put("UserID", TurnControl.user_ID);
 					post.put("plan", planName);
-					
+					post.put("category", "we");
+					post.put("price", "0");
 					//if (!TurnControl.photoPath.equals("")) {
 					AVFile file;
 					//log.e("photo","ok!!");

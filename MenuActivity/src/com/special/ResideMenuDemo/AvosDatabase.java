@@ -48,12 +48,11 @@ public class AvosDatabase {
         	Packages.List2.clear();
         }
 		AVQuery<AVObject> query = new AVQuery<AVObject>("PackageList2");
-		/*
 		Date rtn = null;  
 	    GregorianCalendar cal = new GregorianCalendar();  
 	    Date date = new Date();  
 	    cal.setTime(date);
-	    cal.add(2,-1); 
+	    cal.add(1,-1); 
 	    Date date1=cal.getTime();
 	    AVQuery<AVObject> query1 = new AVQuery<AVObject>("PackageList2");
 	    query1.whereEqualTo("UserID",TurnControl.user_ID);
@@ -63,7 +62,7 @@ public class AvosDatabase {
 					TurnControl.number=packages.size();
 				}
 			});
-		*/
+		
         if (flag==1)
         	query.whereEqualTo("UserID",TurnControl.user_ID);
         else

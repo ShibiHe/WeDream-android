@@ -256,7 +256,8 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         //super.onActivityResult(requestCode, resultCode, data);
        log.e("select", "requestCode = "+requestCode + " resultCode = "+RESULT_OK);
-        if (requestCode == TurnControl.RESULT_LOAD_IMAGE+65536 && resultCode == -1 && null != data) {
+
+        if (requestCode == TurnControl.RESULT_LOAD_IMAGE+65536 && resultCode == -1) {
             Uri selectedImage = data.getData();
             String[] filePathColumn = { MediaStore.Images.Media.DATA };
   
