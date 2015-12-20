@@ -1,15 +1,21 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="tree.love.animtabsview.demo.MainActivity$PlaceholderFragment" >
+<?xml version="1.0" encoding="utf-8"?>
 
-    <ListView
-        android:id="@+id/listView"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fcf="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+	<FrameLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:id="@+id/ignored_view"     >
+    
+    <at.technikum.mti.fancycoverflow.FancyCoverFlow
+        android:id="@+id/fancyCoverFlow"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/publiclisten_tab" >
-    </ListView>
-
-</RelativeLayout>
+        />
+	</FrameLayout>
+</LinearLayout>

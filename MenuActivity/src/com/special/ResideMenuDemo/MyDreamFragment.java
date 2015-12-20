@@ -21,7 +21,7 @@ public class MyDreamFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		saveBundle=savedInstanceState;
-		View rootView = inflater.inflate(R.layout.pakage, container, false);
+		View rootView = inflater.inflate(R.layout.pakage2, container, false);
 		 listview   = (ListView) rootView.findViewById(R.id.listView);	 
 		setupViews(rootView);
 		TurnControl.flagGet = 1;

@@ -78,7 +78,7 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
     	return this;
     }
     private void setUpMenu() {
-
+    	
         // attach to current activity;
         resideMenu = new ResideMenu(this);
         switch (TurnControl.background_ID) {

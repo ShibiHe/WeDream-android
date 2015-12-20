@@ -57,6 +57,7 @@ public class HomeFragment extends Fragment {
     private void setUpViews() {
         MenuActivity parentActivity = (MenuActivity) getActivity();
         resideMenu = parentActivity.getResideMenu();
+
         home_sum_text = (TextView) parentView.findViewById(R.id.main_notation_number);
         //while(Packages.Num2<0);
         parentView.findViewById(R.id.btn_open_menu).setOnClickListener(new View.OnClickListener() {
