@@ -1,6 +1,8 @@
 package com.special.ResideMenuDemo;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -60,7 +62,10 @@ public class AvosDatabase {
 					TurnControl.number=packages.size();
 				}
 			});
-		query.whereEqualTo("UserID",TurnControl.user_ID);
+        if (flag==1)
+        	query.whereEqualTo("UserID",TurnControl.user_ID);
+        else
+        	query.whereEqualTo("category", "we");
         query.findInBackground(new FindCallback<AVObject>() {
 			public void done(List<AVObject> packages, AVException e) {
 				
@@ -79,6 +84,7 @@ public class AvosDatabase {
 					for (int i = 0; i < packages.size(); i++)
 					{
 			        	 PackageInfo good = new PackageInfo();
+			        	 good.objectID = packages.get(i).getObjectId();
 			             good.company = packages.get(i).getString("company");
 			        	 good.category = packages.get(i).getString("category");
 			             good.name = packages.get(i).getString("name");
@@ -135,7 +141,38 @@ public class AvosDatabase {
 		    }
 
 		});
-
+		
+   	 	//Log.e("get error", "get started");
+	     for (int i = 0; i < 11; i++) { //找前10天的数据
+	    	 //Log.e("get error", "get error " + i);
+//			 calendar.add(Calendar.DATE, -1); //得到前一天
+//			 Date thisdate = calendar.getTime();
+//			 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+	    	 	 GregorianCalendar cal_today = new GregorianCalendar();  
+	 	     Date todays = new Date();  
+	 	     cal_today.setTime(todays);
+	 	     cal_today.add(5,-i); 
+	 	     Date thisdate=cal_today.getTime();
+	 	     Log.e("not found", thisdate.toString());
+			 AVQuery<AVObject> query_date = new AVQuery<AVObject>("PackageList2");
+			 final int index = i;
+			 
+			 query_date.whereGreaterThan("createdAt", thisdate);
+ 			 query_date.whereEqualTo("UserID", TurnControl.user_ID); //用户名
+ 			 
+ 			 query_date.countInBackground(new CountCallback() {
+				public void done(int count, AVException e) {
+			        if (e == null) {
+			        		Log.e("get error", "data + " + count);
+						TurnControl.PunchPerDay[index] = count;
+			        } else {
+			            Log.e("not found", "get error " + e.getMessage());
+			        }
+			    }
+ 			});
+ 			
+		 }
+		 
     }
 	
 	boolean update(final Context context, final int num){
@@ -143,6 +180,7 @@ public class AvosDatabase {
 		
 		AVObject tmpPackage = new AVObject("PackageList2");
 		tmpPackage.put("name", tmpList1Package.name);
+		//tmpPackage.put("objectId", tmpList1Package.objectID);
 		tmpPackage.put("category", tmpList1Package.category);
 		tmpPackage.put("price", tmpList1Package.price);
 		tmpPackage.put("company", tmpList1Package.company);

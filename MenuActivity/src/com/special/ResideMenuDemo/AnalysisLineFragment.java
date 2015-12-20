@@ -16,6 +16,7 @@ import com.github.mikephil.charting.utils.ColorTemplate;
 import com.special.ResideMenuDemo.R;
 
 import android.support.v4.app.Fragment;
+import android.R.integer;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -73,7 +74,7 @@ public class AnalysisLineFragment extends Fragment{
 	    SimpleDateFormat matter1=new SimpleDateFormat("dd");
 	    int days = Integer.parseInt(matter1.format(dt));
         log.e("days = "+days);
-        setData(days - 10, 10, 100);
+        setData(days - 9, 10, 100);
         
         mChart.getLegend().setEnabled(true);
         
@@ -99,30 +100,11 @@ public class AnalysisLineFragment extends Fragment{
 	}
 	
 	public void catchData(){
-		TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
-        TurnControl.PunchPerDay.add(10);
+		for (int i = 0; i < 10; i++) {
+			int PunchInterval = TurnControl.PunchPerDay[i+1] - TurnControl.PunchPerDay[i];
+			TurnControl.PunchPerDay[i] = PunchInterval;
+		}
+
 	}
 	private void setData(int start, int count, float range) {
 
@@ -134,7 +116,7 @@ public class AnalysisLineFragment extends Fragment{
         ArrayList<Entry> vals1 = new ArrayList<Entry>();
 
         for (int i = 0; i < count; i++) {
-            vals1.add(new Entry(TurnControl.PunchPerDay.get(start + i), i));
+            vals1.add(new Entry(TurnControl.PunchPerDay[9-i], i));
         }
         
         // create a dataset and give it a type

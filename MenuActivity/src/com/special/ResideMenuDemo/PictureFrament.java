@@ -5,9 +5,12 @@ import java.security.PublicKey;
 
 import java.util.ArrayList;
 
+import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
+import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVQuery;
 import com.avos.avoscloud.LogUtil.log;
+import com.avos.avoscloud.SaveCallback;
 import com.special.ResideMenu.ResideMenu;
 
 import android.annotation.SuppressLint;
@@ -15,6 +18,7 @@ import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,6 +38,7 @@ public class PictureFrament extends Fragment {
 		View parentView;
 		AVImageView imageView;
 		TextView textView;
+		TextView textView2;
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		   parentView = inflater.inflate(R.layout.picture, container, false);
 		   initview();
@@ -47,27 +52,34 @@ public class PictureFrament extends Fragment {
 	    	imageView= (AVImageView) parentView.findViewById(R.id.picture);
 //	    	imageView.setImageResource(R.drawable.qr);
 	    	textView = (TextView) parentView.findViewById(R.id.twoDCode);
+	    	textView2 = (TextView) parentView.findViewById(R.id.twoDCode2);
 	    	AVFile picture_big = list.get(TurnControl.selectPackage).picture; 
 	    	String introduction = list.get(TurnControl.selectPackage).name;
+	    	String introduction2 = list.get(TurnControl.selectPackage).price;
+
 	    	imageView.setAVFile(picture_big);
 	    	imageView.loadInBackground();
 	    	textView.setText(introduction);
-   	
+	    	textView2.setText(introduction2);
+	    	
 	    	Button btn = (Button)parentView.findViewById(R.id.get_button);
 		    btn.setOnClickListener(new View.OnClickListener(){
 				@Override
 				public void onClick(View v) {
-					AvosDatabase packages = new AvosDatabase();
-					if (packages.update(getActivity(), TurnControl.selectPackage)){
-						Toast.makeText(getActivity(), "ȡ���ɹ�O(��_��)O", Toast.LENGTH_SHORT).show();
-				        TurnControl.curFragment = 1;
-				        TurnControl.number++;
-			        	changeFragment(new PackageFragment());
-
-					}else{
-						Toast.makeText(getActivity(), "�����������T.T", Toast.LENGTH_SHORT).show();
-					}
-					
+					String objectID = list.get(TurnControl.selectPackage).objectID;
+					String tableName = new String();
+					if (TurnControl.flagGet == 1)
+						tableName = "PackageList1";
+					else
+						tableName = "PackageList2";
+					AVObject post = AVObject.createWithoutData(tableName, objectID);
+					//更新属性
+					Integer dianzan = Integer.parseInt(list.get(TurnControl.selectPackage).price) + 1;
+					post.put("price", dianzan.toString());
+					//保存
+					post.saveInBackground();
+//					Toast.makeText(getActivity(), "successful", Toast.LENGTH_LONG);
+					textView2.setText(dianzan.toString());
 				}
 		    	
 		    });
@@ -79,5 +91,4 @@ public class PictureFrament extends Fragment {
 		                .setTransitionStyle(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
 		                .commit();
 		    }
-
 }

@@ -97,13 +97,13 @@ public class AnalysisBarFragment extends Fragment {
 	}
 	
 	public void catchData(){
-		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(0).name, Toast.LENGTH_SHORT).show();
-		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(1).name, Toast.LENGTH_SHORT).show();
-		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(2).name, Toast.LENGTH_SHORT).show();
-		
-		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(0).name, Toast.LENGTH_SHORT).show();
-		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(1).name, Toast.LENGTH_SHORT).show();
-		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(2).name, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(0).name, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(1).name, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(2).name, Toast.LENGTH_SHORT).show();
+//		
+//		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(0).name, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(1).name, Toast.LENGTH_SHORT).show();
+//		Toast.makeText(getActivity(), "分别是:"+ TurnControl.Plan.get(2).name, Toast.LENGTH_SHORT).show();
 
 		
 //        TurnControl.PlanName.add("toefl");

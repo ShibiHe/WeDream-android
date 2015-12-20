@@ -17,12 +17,15 @@ public class TurnControl {
 	public static int number = 0;
 	public static int RESULT_LOAD_IMAGE = 1;
 	public static String photoPath = "";
-	public static int photoNumber = 0;
 <<<<<<< HEAD
+	public static int photoNumber = 0;
 	public static int PlanNumber = 0;
 	public static ArrayList<Plans> Plan = new ArrayList<Plans>();
 	public static ArrayList<Integer> PunchPerDay = new ArrayList<Integer>(); 
 =======
-
+	public static int photoNumber = 0;
+	public static int PlanNumber = 0;
+	public static ArrayList<Plans> Plan = new ArrayList<Plans>();
+	public static int PunchPerDay[] = new int[11]; 
 >>>>>>> origin/master
 }
