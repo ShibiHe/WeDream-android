@@ -105,11 +105,11 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
 
         // create menu items;
         itemHome     = new ResideMenuItem(this, R.drawable.icon_home,     "主界面");
-        itemMypackage  = new ResideMenuItem(this, R.drawable.icon_package,  "WeDream");
-        itemProfile  = new ResideMenuItem(this, R.drawable.icon_profile,  "个人资料");
-        itemShare = new ResideMenuItem(this,R.drawable.icon_share,"MyDream");
-        itemAnalysis = new ResideMenuItem(this, R.drawable.icon_analysis, "购物分析");
-        itemSkin = new ResideMenuItem(this, R.drawable.icon_settings, "多彩皮肤");
+        itemMypackage  = new ResideMenuItem(this, R.drawable.icon_package,  "梦想画廊");
+        itemProfile  = new ResideMenuItem(this, R.drawable.icon_profile,  "近期打卡");
+        itemShare = new ResideMenuItem(this,R.drawable.icon_share,"梦想清单");
+        itemAnalysis = new ResideMenuItem(this, R.drawable.icon_analysis, "计划分析");
+        itemSkin = new ResideMenuItem(this, R.drawable.icon_settings, "梦想主题");
         itemSignOut  = new ResideMenuItem(this, R.drawable.icon_back,  "注销账号");
         itemPost = new ResideMenuItem(this, R.drawable.icon_message, "上传打卡");
         
@@ -125,12 +125,14 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         
         resideMenu.addMenuItem(itemHome, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(itemMypackage, ResideMenu.DIRECTION_LEFT);
-        resideMenu.addMenuItem(itemProfile, ResideMenu.DIRECTION_LEFT);
-        resideMenu.addMenuItem(itemSkin, ResideMenu.DIRECTION_LEFT);
         resideMenu.addMenuItem(itemShare,ResideMenu.DIRECTION_LEFT);
+        resideMenu.addMenuItem(itemSkin, ResideMenu.DIRECTION_LEFT);
+        
+        resideMenu.addMenuItem(itemPost, ResideMenu.DIRECTION_RIGHT);
+        resideMenu.addMenuItem(itemProfile, ResideMenu.DIRECTION_RIGHT);
         resideMenu.addMenuItem(itemAnalysis, ResideMenu.DIRECTION_RIGHT);
         resideMenu.addMenuItem(itemSignOut, ResideMenu.DIRECTION_RIGHT);
-        resideMenu.addMenuItem(itemPost, ResideMenu.DIRECTION_RIGHT);
+        
         // You can disable a direction by setting ->
         // resideMenu.setSwipeDirectionDisable(ResideMenu.DIRECTION_RIGHT);
 

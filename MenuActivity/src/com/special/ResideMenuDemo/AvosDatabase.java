@@ -47,7 +47,8 @@ public class AvosDatabase {
         } else{
         	Packages.List2.clear();
         }
-		AVQuery<AVObject> query = new AVQuery<AVObject>("PackageList" + flag);
+		AVQuery<AVObject> query = new AVQuery<AVObject>("PackageList2");
+		/*
 		Date rtn = null;  
 	    GregorianCalendar cal = new GregorianCalendar();  
 	    Date date = new Date();  
@@ -62,6 +63,7 @@ public class AvosDatabase {
 					TurnControl.number=packages.size();
 				}
 			});
+		*/
         if (flag==1)
         	query.whereEqualTo("UserID",TurnControl.user_ID);
         else
@@ -88,10 +90,11 @@ public class AvosDatabase {
 			             good.company = packages.get(i).getString("company");
 			        	 good.category = packages.get(i).getString("category");
 			             good.name = packages.get(i).getString("name");
+			             good.userID = packages.get(i).getString("UserID");
 			        	 good.price = packages.get(i).getString("price");
 			        	 good.picture = packages.get(i).getAVFile("picture_1");
-			        	 good.imageLoc = packages.get(i).getString("image");
-			        	 good.image = BitmapFactory.decodeFile(good.imageLoc);
+//			        	 good.imageLoc = packages.get(i).getString("image");
+//			        	 good.image = BitmapFactory.decodeFile(good.imageLoc);
 			             if (flag == 1){
 			            	 Packages.List1.add(good);	 
 			             }else{

@@ -9,6 +9,7 @@ public class PackageInfo {
 	String name;
 	String price;
 	String id;
+	String userID;
 	String imageLoc;
 	String category;
 	Bitmap image;

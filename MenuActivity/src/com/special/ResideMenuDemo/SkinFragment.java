@@ -86,9 +86,9 @@ public class SkinFragment  extends Fragment {
 	
     protected void dialog(final int id){
     	AlertDialog.Builder dialog_out = new Builder(getActivity());
-    	dialog_out.setMessage("你确定换肤么？");
-    	dialog_out.setTitle("提示");
-    	dialog_out.setPositiveButton("确认", new OnClickListener(){
+    	dialog_out.setMessage("Are you sure?");
+    	dialog_out.setTitle("Change Theme");
+    	dialog_out.setPositiveButton("Yes", new OnClickListener(){
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				TurnControl.userAvObject.put("backgroundID", String.valueOf(id));
@@ -98,7 +98,7 @@ public class SkinFragment  extends Fragment {
 				
 			}
     	});
-    	dialog_out.setNegativeButton("取消", new OnClickListener(){
+    	dialog_out.setNegativeButton("No", new OnClickListener(){
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				dialog.dismiss();

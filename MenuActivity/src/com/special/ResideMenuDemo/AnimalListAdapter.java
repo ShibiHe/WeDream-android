@@ -68,7 +68,7 @@ public class AnimalListAdapter extends BaseAdapter
 			holder = new ViewHolder();
 			convertView = mInflater.inflate(R.layout.pakage_item, null);
 			holder.icon = (AVImageView) convertView.findViewById(R.id.iv_goods);  
-			holder.cn_word0 = (TextView) convertView.findViewById(R.id.tv_goodsID);
+//			holder.cn_word0 = (TextView) convertView.findViewById(R.id.tv_goodsID);
 			holder.cn_word1 = (TextView) convertView.findViewById(R.id.tv_logisticalCompany);  
 			holder.cn_word2 = (TextView) convertView.findViewById(R.id.tv_goodsName);
 			holder.cn_word3 = (TextView) convertView.findViewById(R.id.tv_goodsPrice);
@@ -84,8 +84,8 @@ public class AnimalListAdapter extends BaseAdapter
 			good = Packages.List2.get(position);
 		}
 		
-		holder.cn_word0.setText(String.valueOf(position + 1));
-		holder.cn_word1.setText(good.company);
+//		holder.cn_word0.setText(String.valueOf(position + 1));
+		holder.cn_word1.setText(good.userID);
 		holder.cn_word2.setText(good.name);
 		holder.cn_word3.setText(good.price);
 //		holder.icon.setImageBitmap(good.image);

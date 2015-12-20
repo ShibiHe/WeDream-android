@@ -24,7 +24,7 @@ public class MyDreamFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.pakage2, container, false);
 		 listview   = (ListView) rootView.findViewById(R.id.listView);	 
 		setupViews(rootView);
-		TurnControl.flagGet = 1;
+		TurnControl.flagGet = 2;
 		return rootView;
 	}
 	

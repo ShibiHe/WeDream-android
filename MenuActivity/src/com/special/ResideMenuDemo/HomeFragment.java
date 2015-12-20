@@ -67,6 +67,7 @@ public class HomeFragment extends Fragment {
                 AvosDatabase avosDatabase=new AvosDatabase();
                 TurnControl.Plan.clear();
                 avosDatabase.getDatabase(1);
+                avosDatabase.getDatabase(2);
                 Toast.makeText(getActivity(), "Update Successfully", Toast.LENGTH_SHORT);
             }
         });
