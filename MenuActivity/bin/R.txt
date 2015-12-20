@@ -46,6 +46,7 @@ int drawable icon_profile 0x7f020019
 int drawable icon_settings 0x7f02001a
 int drawable icon_share 0x7f02001b
 <<<<<<< HEAD
+<<<<<<< HEAD
 int drawable icondianzan 0x7f02001c
 int drawable main_get_butto 0x7f02001d
 int drawable main_get_button 0x7f02001e
@@ -180,10 +181,79 @@ int drawable user_background 0x7f020058
 int id User_Background 0x7f0a000c
 int id User_ID 0x7f0a000b
 int id auto 0x7f0a0000
+=======
+int drawable main_get_butto 0x7f02001c
+int drawable main_get_button 0x7f02001d
+int drawable main_get_button_on 0x7f02001e
+int drawable main_like_button 0x7f02001f
+int drawable main_menu_icon 0x7f020020
+int drawable main_message_box 0x7f020021
+int drawable main_share_button 0x7f020022
+int drawable menu_background 0x7f020023
+int drawable menu_background1 0x7f020024
+int drawable menu_background1_l 0x7f020025
+int drawable menu_background2 0x7f020026
+int drawable menu_background2_l 0x7f020027
+int drawable menu_background3 0x7f020028
+int drawable menu_background3_l 0x7f020029
+int drawable menu_background4 0x7f02002a
+int drawable menu_background4_l 0x7f02002b
+int drawable mm1 0x7f02002c
+int drawable mm2 0x7f02002d
+int drawable mm3 0x7f02002e
+int drawable mm4 0x7f02002f
+int drawable photo_button 0x7f020030
+int drawable photo_button2 0x7f020031
+int drawable post_bg1 0x7f020032
+int drawable post_button 0x7f020033
+int drawable post_button2 0x7f020034
+int drawable qr 0x7f020035
+int drawable register 0x7f020036
+int drawable shadow 0x7f020037
+int drawable signin 0x7f020038
+int drawable signin2 0x7f020039
+int drawable signin3 0x7f02003a
+int drawable skin_tabbar_btn 0x7f02003b
+int drawable skin_tabbar_btn_popup_addmore 0x7f02003c
+int drawable skin_tabbar_btn_popup_journal 0x7f02003d
+int drawable skin_tabbar_btn_popup_mask 0x7f02003e
+int drawable skin_tabbar_btn_popup_registration 0x7f02003f
+int drawable skin_tabbar_btn_popup_talk 0x7f020040
+int drawable skin_tabbar_btn_popup_transferphotos 0x7f020041
+int drawable skin_tabbar_btn_popup_video 0x7f020042
+int drawable skin_tabbar_btn_popup_watermarkcamera 0x7f020043
+int drawable skin_tabbar_icon 0x7f020044
+int drawable skin_tabbar_icon_at 0x7f020045
+int drawable skin_tabbar_icon_at_click 0x7f020046
+int drawable skin_tabbar_icon_at_select 0x7f020047
+int drawable skin_tabbar_icon_auth 0x7f020048
+int drawable skin_tabbar_icon_auth_click 0x7f020049
+int drawable skin_tabbar_icon_auth_select 0x7f02004a
+int drawable skin_tabbar_icon_click 0x7f02004b
+int drawable skin_tabbar_icon_more 0x7f02004c
+int drawable skin_tabbar_icon_more_click 0x7f02004d
+int drawable skin_tabbar_icon_more_select 0x7f02004e
+int drawable skin_tabbar_icon_select 0x7f02004f
+int drawable skin_tabbar_icon_space 0x7f020050
+int drawable skin_tabbar_icon_space_click 0x7f020051
+int drawable skin_tabbar_icon_space_select 0x7f020052
+int drawable tab_item_text_color_selector 0x7f020053
+int drawable title_bar_menu 0x7f020054
+int drawable title_bar_menu_on 0x7f020055
+int drawable titlebar_menu_selector 0x7f020056
+int drawable user 0x7f020057
+int drawable user_background 0x7f020058
+int id User_Background 0x7f0a000c
+int id User_ID 0x7f0a000b
+int id auto 0x7f0a0000
+>>>>>>> origin/master
 int id backgroundButton1 0x7f0a004c
 int id backgroundButton2 0x7f0a004d
 int id backgroundButton3 0x7f0a004e
 int id backgroundButton4 0x7f0a004f
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 int id btn_add_qrcode 0x7f0a001f
 int id btn_open_menu 0x7f0a0024
@@ -195,6 +265,7 @@ int id email_register_in_button 0x7f0a0009
 int id email_sign_in_button 0x7f0a0008
 int id et_qr_string 0x7f0a001e
 int id fancyCoverFlow 0x7f0a002d
+<<<<<<< HEAD
 <<<<<<< HEAD
 int id frameMenu 0x7f0a0039
 int id frame_content 0x7f0a0038
@@ -215,6 +286,8 @@ int id layout_left_menu 0x7f0a0048
 int id layout_more 0x7f0a003c
 int id layout_right_menu 0x7f0a004a
 =======
+=======
+>>>>>>> origin/master
 int id frameMenu 0x7f0a0038
 int id frame_content 0x7f0a0037
 int id fullscreen_content 0x7f0a000d
@@ -233,6 +306,9 @@ int id layout_auth 0x7f0a0039
 int id layout_left_menu 0x7f0a0047
 int id layout_more 0x7f0a003b
 int id layout_right_menu 0x7f0a0049
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 int id layout_top 0x7f0a0028
 int id listView 0x7f0a001d
@@ -250,6 +326,7 @@ int id message_register_in_button 0x7f0a0018
 int id password 0x7f0a0006
 int id picture 0x7f0a0034
 <<<<<<< HEAD
+<<<<<<< HEAD
 int id plan_list 0x7f0a0040
 int id post_EditText 0x7f0a003f
 int id post_ImageButton 0x7f0a0041
@@ -258,6 +335,8 @@ int id post_back 0x7f0a003b
 int id post_photo 0x7f0a003d
 int id post_post 0x7f0a003e
 =======
+=======
+>>>>>>> origin/master
 int id plan_list 0x7f0a003f
 int id post_EditText 0x7f0a003e
 int id post_ImageButton 0x7f0a0040
@@ -265,6 +344,9 @@ int id post_SelectButton 0x7f0a0041
 int id post_back 0x7f0a003a
 int id post_photo 0x7f0a003c
 int id post_post 0x7f0a003d
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
 int id profileList 0x7f0a000e
 int id profile_up 0x7f0a000a
@@ -274,8 +356,13 @@ int id register_password 0x7f0a0013
 int id register_password_repeat 0x7f0a0014
 int id signOut_button 0x7f0a0010
 <<<<<<< HEAD
+<<<<<<< HEAD
 int id sv_left_menu 0x7f0a0047
 int id sv_right_menu 0x7f0a0049
+=======
+int id sv_left_menu 0x7f0a0046
+int id sv_right_menu 0x7f0a0048
+>>>>>>> origin/master
 =======
 int id sv_left_menu 0x7f0a0046
 int id sv_right_menu 0x7f0a0048
@@ -290,9 +377,14 @@ int id tv_goodsName 0x7f0a0031
 int id tv_goodsPrice 0x7f0a0033
 int id tv_logisticalCompany 0x7f0a0032
 <<<<<<< HEAD
+<<<<<<< HEAD
 int id tv_title 0x7f0a004c
 int id twoDCode 0x7f0a0035
 int id twoDCode2 0x7f0a0036
+=======
+int id tv_title 0x7f0a004b
+int id twoDCode 0x7f0a0035
+>>>>>>> origin/master
 =======
 int id tv_title 0x7f0a004b
 int id twoDCode 0x7f0a0035

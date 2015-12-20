@@ -195,15 +195,21 @@ containing a value of this type.
         public static final int User_ID=0x7f0a000b;
         public static final int auto=0x7f0a0000;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int backgroundButton1=0x7f0a004d;
         public static final int backgroundButton2=0x7f0a004e;
         public static final int backgroundButton3=0x7f0a004f;
         public static final int backgroundButton4=0x7f0a0050;
 =======
+=======
+>>>>>>> origin/master
         public static final int backgroundButton1=0x7f0a004c;
         public static final int backgroundButton2=0x7f0a004d;
         public static final int backgroundButton3=0x7f0a004e;
         public static final int backgroundButton4=0x7f0a004f;
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
         public static final int btn_add_qrcode=0x7f0a001f;
         public static final int btn_open_menu=0x7f0a0024;
@@ -215,6 +221,7 @@ containing a value of this type.
         public static final int email_sign_in_button=0x7f0a0008;
         public static final int et_qr_string=0x7f0a001e;
         public static final int fancyCoverFlow=0x7f0a002d;
+<<<<<<< HEAD
 <<<<<<< HEAD
         public static final int frameMenu=0x7f0a0039;
         public static final int frame_content=0x7f0a0038;
@@ -240,6 +247,13 @@ containing a value of this type.
         public static final int fullscreen_content=0x7f0a000d;
         public static final int fullscreen_content_controls=0x7f0a000f;
         public static final int general_background=0x7f0a0027;
+=======
+        public static final int frameMenu=0x7f0a0038;
+        public static final int frame_content=0x7f0a0037;
+        public static final int fullscreen_content=0x7f0a000d;
+        public static final int fullscreen_content_controls=0x7f0a000f;
+        public static final int general_background=0x7f0a0027;
+>>>>>>> origin/master
         public static final int get_button=0x7f0a0036;
         public static final int ignored_view=0x7f0a002c;
         public static final int itemText=0x7f0a0043;
@@ -253,6 +267,9 @@ containing a value of this type.
         public static final int layout_left_menu=0x7f0a0047;
         public static final int layout_more=0x7f0a003b;
         public static final int layout_right_menu=0x7f0a0049;
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
         public static final int layout_top=0x7f0a0028;
         public static final int listView=0x7f0a001d;
@@ -270,6 +287,7 @@ containing a value of this type.
         public static final int password=0x7f0a0006;
         public static final int picture=0x7f0a0034;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int plan_list=0x7f0a0040;
         public static final int post_EditText=0x7f0a003f;
         public static final int post_ImageButton=0x7f0a0041;
@@ -278,6 +296,8 @@ containing a value of this type.
         public static final int post_photo=0x7f0a003d;
         public static final int post_post=0x7f0a003e;
 =======
+=======
+>>>>>>> origin/master
         public static final int plan_list=0x7f0a003f;
         public static final int post_EditText=0x7f0a003e;
         public static final int post_ImageButton=0x7f0a0040;
@@ -285,6 +305,9 @@ containing a value of this type.
         public static final int post_back=0x7f0a003a;
         public static final int post_photo=0x7f0a003c;
         public static final int post_post=0x7f0a003d;
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
         public static final int profileList=0x7f0a000e;
         public static final int profile_up=0x7f0a000a;
@@ -294,8 +317,13 @@ containing a value of this type.
         public static final int register_password_repeat=0x7f0a0014;
         public static final int signOut_button=0x7f0a0010;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int sv_left_menu=0x7f0a0047;
         public static final int sv_right_menu=0x7f0a0049;
+=======
+        public static final int sv_left_menu=0x7f0a0046;
+        public static final int sv_right_menu=0x7f0a0048;
+>>>>>>> origin/master
 =======
         public static final int sv_left_menu=0x7f0a0046;
         public static final int sv_right_menu=0x7f0a0048;
@@ -310,9 +338,14 @@ containing a value of this type.
         public static final int tv_goodsPrice=0x7f0a0033;
         public static final int tv_logisticalCompany=0x7f0a0032;
 <<<<<<< HEAD
+<<<<<<< HEAD
         public static final int tv_title=0x7f0a004c;
         public static final int twoDCode=0x7f0a0035;
         public static final int twoDCode2=0x7f0a0036;
+=======
+        public static final int tv_title=0x7f0a004b;
+        public static final int twoDCode=0x7f0a0035;
+>>>>>>> origin/master
 =======
         public static final int tv_title=0x7f0a004b;
         public static final int twoDCode=0x7f0a0035;
