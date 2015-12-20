@@ -163,9 +163,10 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         	changeFragment(new PackageFragment());
         }else if (view == itemProfile){
             TurnControl.curFragment = 2;
-            Intent intent = new Intent();
-        	intent.setClass(MenuActivity.this, ProfileActivity.class);
-        	startActivity(intent);
+            //  Intent intent = new Intent();
+        		//intent.setClass(MenuActivity.this, ProfileActivity.class);
+        		//startActivity(intent);
+        		changeFragment(new AnalysisLineFragment());
         }else if(view == itemShare){
         	TurnControl.curFragment = 3;
         	changeFragment(new MyDreamFragment());
@@ -173,9 +174,9 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
             TurnControl.curFragment = 4;
         	changeFragment(new SkinFragment());
         }else if (view == itemAnalysis){
-            Packages.calc();
+            //Packages.calc();
 	        TurnControl.curFragment = 5;
-	    	changeFragment(new AnalysisPieFragment());
+	    		changeFragment(new AnalysisBarFragment());
         }else if (view == itemSignOut){
         	Intent intent = new Intent();
         	intent.setClass(MenuActivity.this, LoginActivity.class);

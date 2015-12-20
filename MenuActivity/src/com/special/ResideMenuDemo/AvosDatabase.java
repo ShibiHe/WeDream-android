@@ -13,11 +13,6 @@ import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVObject;
-import com.avos.avoscloud.AVQuery;
-import com.avos.avoscloud.DeleteCallback;
-import com.avos.avoscloud.FindCallback;
 import com.avos.avoscloud.LogUtil.log;
 import com.avos.avoscloud.*;
 
@@ -103,7 +98,44 @@ public class AvosDatabase {
 				}
 			}
 		});
-	             
+        
+        AVQuery<AVObject> query_plan = new AVQuery<AVObject>(TurnControl.user_ID+"Info");
+		query_plan.whereNotEqualTo("plan", "default");
+		query_plan.include("number");
+		query_plan.findInBackground(new FindCallback<AVObject>() {
+		    public void done(List<AVObject> avObjects, AVException e) {
+		        if (e == null) {
+		        		//Toast.makeText(getActivity(), "成功查询到:"+ avObjects.size() + " 条符合条件的数据", Toast.LENGTH_SHORT).show();
+		            TurnControl.PlanNumber = avObjects.size();
+		            for (int i = 0; i <TurnControl.PlanNumber; i++) {
+		            		final Plans myplan = new Plans();
+						myplan.name = avObjects.get(i).getString("plan"); 
+			            AVQuery<AVObject> query_number = new AVQuery<AVObject>("PackageList2");
+			            
+		    				query_number.whereEqualTo("plan", myplan.name); //计划的名字
+		    				//final String string = TurnControl.PlanName.get(i);
+		        			query_number.whereEqualTo("UserID", TurnControl.user_ID); //用户名
+		        			query_number.findInBackground(new FindCallback<AVObject>() {
+		        				public void done(List<AVObject> av, AVException e) {
+		        			        if (e == null) {
+		        			        		Log.e("get error", myplan.name+"+"+ av.size());
+		        						myplan.number = av.size();
+		        						TurnControl.Plan.add(myplan);
+		        			        } else {
+		        			            Log.e("get error", "get error " + e.getMessage());
+		        			        }
+		        			    }
+
+		        			});
+
+					}
+		        } else {
+		            Log.d("失败", "查询错误: " + e.getMessage());
+		        }
+		    }
+
+		});
+
     }
 	
 	boolean update(final Context context, final int num){

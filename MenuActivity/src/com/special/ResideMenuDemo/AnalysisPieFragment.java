@@ -67,14 +67,14 @@ public class AnalysisPieFragment extends Fragment {
             xVals.add("entry" + 3);
             entries1.add(new Entry((float)Packages.CategoryLife.doubleValue()/1000, 3));
         
-        PieDataSet ds1 = new PieDataSet(entries1, "1KM ¹ºÎï·ÖÎö");
+        PieDataSet ds1 = new PieDataSet(entries1, "WeDream");
         ds1.setColors(ColorTemplate.VORDIPLOM_COLORS);
         ds1.setSliceSpace(2f);
         ds1.setValueTextColor(Color.BLACK);
         ds1.setValueTextSize(16f);
         
         PieData d = new PieData(xVals, ds1);
-    	Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "SourceCodePro-Black.ttf");     
+        Typeface tf = Typeface.createFromAsset(getActivity().getAssets(), "SourceCodePro-Black.ttf");     
         d.setValueTypeface(tf);
 
         return d;

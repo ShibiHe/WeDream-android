@@ -3,23 +3,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 	 
-	 <EditText
-        android:id="@+id/post_EditText"
-        android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_marginTop="0dp"
-        android:layout_weight="0.25"
-        android:ems="10"
-        android:text="record your life" >
-        <requestFocus />
-    </EditText>
-    
     <FrameLayout
         android:id="@+id/frame_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/frameMenu"
-        android:layout_alignParentTop="true" >
+        android:layout_alignTop="@+id/frameMenu" >
+
     </FrameLayout>
 
     <FrameLayout
@@ -108,5 +97,24 @@
         android:layout_alignTop="@+id/frameMenu"
         android:layout_centerInParent="true"
         android:src="@drawable/skin_tabbar_icon_select" />
+
+    <EditText
+        android:id="@+id/post_EditText"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_weight="0.25"
+        android:ems="10"
+        android:text="record your life" />
+
+    <Spinner
+        android:id="@+id/plan_list"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/post_EditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
 
 </RelativeLayout>

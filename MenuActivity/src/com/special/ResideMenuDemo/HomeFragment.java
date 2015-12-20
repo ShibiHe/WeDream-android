@@ -62,7 +62,10 @@ public class HomeFragment extends Fragment {
         parentView.findViewById(R.id.btn_open_menu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                resideMenu.openMenu(ResideMenu.DIRECTION_LEFT);
+                //resideMenu.openMenu(ResideMenu.DIRECTION_LEFT);
+                AvosDatabase avosDatabase=new AvosDatabase();
+                TurnControl.Plan.clear();
+                avosDatabase.getDatabase(1);
             }
         });
         home_sum_text.setText(String.valueOf(TurnControl.number));
