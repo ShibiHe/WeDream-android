@@ -110,7 +110,7 @@ public class RegisterPasswordActivity extends Activity implements LoaderCallback
 			if(password.equals(password_r))
 				checkuser(password,password_r);
 			else {
-				showError("请确保两次输入密码一致");
+				showError("鐧诲綍澶辫触");
 			}
 		}
 	}

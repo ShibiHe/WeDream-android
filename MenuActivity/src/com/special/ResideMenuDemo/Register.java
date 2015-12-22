@@ -112,7 +112,7 @@ public class Register extends Activity implements LoaderCallbacks<Cursor> {
 		query.findInBackground(new FindCallback<AVObject>() {
 			public void done(List<AVObject> user,AVException e){
 				if(user.size()==0){
-					AVOSCloud.requestSMSCodeInBackgroud(tel,"1km","×¢²á·þÎñ", 60, new RequestMobileCodeCallback(){
+					AVOSCloud.requestSMSCodeInBackgroud(tel,"WeDream","æ³¨å†Œ", 60, new RequestMobileCodeCallback(){
 						 @Override
 					      public void done(AVException e) {
 							 

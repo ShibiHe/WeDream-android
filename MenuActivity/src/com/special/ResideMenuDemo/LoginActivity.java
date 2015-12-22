@@ -129,7 +129,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 				if(isConnect(getApplicationContext())==true)
 					attemptLogin();	
 				else {
-					Toast.makeText(LoginActivity.this, "«ÎºÏ≤Èª•¡™Õ¯◊™Ã¨£°", Toast.LENGTH_SHORT).show();
+					Toast.makeText(LoginActivity.this, "网络错误", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
@@ -146,7 +146,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 					LoginActivity.this.finish();
 				}
 				else {
-					Toast.makeText(LoginActivity.this, "«ÎºÏ≤Èª•¡™Õ¯◊™Ã¨£°", Toast.LENGTH_SHORT).show();
+					Toast.makeText(LoginActivity.this, "网络错误", Toast.LENGTH_SHORT).show();
 				}
 			}
 		});
